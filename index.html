@@ -1,0 +1,567 @@
+<!doctype html>
+<head>
+<title>Craftguy&trade;</title>
+<meta content='width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;' name='viewport' />
+<meta name="theme-color" content="#f8fa75">
+<meta name="keywords" content="craftguy,youtube craftguy,craftguy youtube,youtube">
+<meta name="description" content="Craftguy&trade; is the main page of Craftguy.">
+<link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA/4QAAP/3AACR/9wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEREREREREREQAAAAAAAAARAREREREREBEBMzMzMzMQEQEzMzMzMxARATMREREzEBEBMxAAATMQEQEzEAABMxARAREQAAEREBEAAAAAAAAAEQEREAABERARASIQAAEiEBEBIhAAASIQEQEREAABERARAAAAAAAAABEREREREREREAAAAAf/4AAEACAABAAgAAQAIAAEACAABDwgAAQ8IAAEPCAAB//gAAQ8IAAEPCAABDwgAAQ8IAAH/+AAAAAAAA" rel="icon" type="image/x-icon" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<style>
+    ::selection{
+      background-color:#000;
+    }
+    body{
+        background-color:aquamarine;
+        margin-top:0;
+        height: 2630px;
+        position:relative;
+        overflow-x:hidden;
+        margin:0px;
+    }
+    .header{
+        display:flex;
+        background-color:#fff;
+        width:220px;
+        padding: 10px 15px 10px;
+        margin-bottom:15px;
+        animation-name:border;
+        animation-duration:7s;
+        animation-iteration-count: infinite;
+    }
+    @keyframes border{
+      0% {border: 2px solid #000;}
+      12.5% {border: 2px solid #e33c30;}
+      25% {border: 2px solid #e3b630;}
+      37.5% {border: 2px solid #dde330;}
+      50% {border: 2px solid #39e330;}
+      62.5% {border: 2px solid #30e392;}
+      75% {border: 2px solid #3048e3;}
+      87.5% {border: 2px solid #a130e3;}
+      100% {border: 2px solid #000;}
+    }
+    .header-words {
+        display:inline-block;
+        line-height:60px;
+        height:60px;
+        background-color:#fff;
+        vertical-align:top;
+        padding: 0px 10px 0px 10px;
+        font-size:30px;
+        color:#000;
+        font-family:Consolas;
+    }
+ table {
+    width:100%;
+    table-layout: fixed;
+ }
+ th {
+    color: #000;
+    background-color:bisque;
+    font-size: 4.5vw;
+    line-height:6.5vh;
+    font-family: Consolas;
+    border:1.5px solid #000;
+    border-radius:7px;
+    box-shadow: 1px 1px 3px #9d9da3;
+ }
+ th:hover {
+    background-color: #d4b935;
+    cursor: pointer;
+ }
+ th:active {
+   background-color: #99871f;
+   transform:translate(1px,1px)
+ }
+ label{
+    width:100%;
+    min-height: 100%; 
+    height: auto; 
+    display: inline-block;
+ }
+ label:hover {
+    cursor:pointer;
+ }
+ #radio1 {
+    display:none;
+ }
+ #radio2 {
+    display:none;
+ }
+ #radio3 {
+    display:none;
+ }
+ #b1 {
+    width:95%;
+    height:2200px;
+    background-color: #69fcff;
+    margin-top:10px;
+    border: 1.5px double #000;
+    font-size: 25px;
+    color: #000;
+    font-family: Consolas;
+    position:absolute;
+    display:none;
+    border-radius:7px;
+ }
+ #b2 {
+    width:95%;
+    height:2200px;
+    background-color: #ffff94;
+    margin-top:10px;
+    border: 1.5px double #000;
+    font-size: 25px;
+    color: #000;
+    font-family: Consolas;
+    position:absolute;
+    display:none;
+    border-radius:7px;
+ }
+ #b3 {
+    width:95%;
+    height:2200px;
+    background-color: #fca7af;
+    margin-top:10px;
+    border: 1.5px double #000;
+    font-size: 25px;
+    color: #000;
+    font-family: Consolas;
+    position:absolute;
+    display:none;
+    border-radius:7px;
+ }
+ #radio1:checked ~ #b1 {
+    display:block
+ }
+ #radio2:checked ~ #b2 {
+    display:block;
+ }
+ #radio3:checked ~ #b3 {
+    display:block;
+ }
+ .headings{
+   font-family: Consolas;
+   font-size: 30px;
+   text-decoration: underline;
+   padding-left: 15px;
+   padding-top:10px;
+   margin-bottom:15px;
+ }
+ .contents{
+   font-size:20px;
+   text-decoration:none;
+   padding-left:15px;
+   line-height:25px;
+ }
+ a{
+   text-decoration:none;
+   color: #000;
+ }
+ a:hover{
+   color:#000;
+   cursor:pointer;
+ }
+ div.button{
+   margin-top:2em;
+   display:table;
+ }
+ div.button:active{
+  transform:translateY(3px);
+ }
+ .email{
+   font-size: 40px;
+   font-weight: bold;
+   background-color: #b0baff;
+   padding:10px 5px;
+   border: 1.9px solid #051b69;
+   border-radius: 5px;
+   box-shadow: 1px 4px #8f8f8f;
+ }
+ .email:hover{
+   background-color: #5b6cde;
+ }
+ .email:active{
+   transform:translateY(3px);
+   background-color:#3344b5;
+   box-shadow: 1px 1px #8f8f8f;
+ }
+ .email2{
+   font-weight: bold;
+   background-color: #ecf783;
+   padding:10px 5px;
+   border-radius: 5px;
+   box-shadow: 1px 4px #8f8f8f;
+   font-size:4.2vw;
+   border:1.9px solid #02083d;
+ }
+ .email2:hover{
+   background-color: #cfdb65;
+ }
+ .email2:active{
+   background-color:#adbd24;
+   box-shadow: 1px 1px #8f8f8f;
+   transform:translateY(3px);
+ }
+ .menu{
+   margin-left:auto;
+   z-index:2000;
+ }
+ .container {
+   display:flex;
+ }
+ .menu:hover{
+   cursor:pointer;
+ }
+ .list{
+   position:absolute;
+   margin:0px;
+   width:100vw;
+   height:auto;
+   max-height:100%;
+   background-color:#3b3eff;
+   z-index: 1500;
+   text-align:center;
+   font-family:Consolas;
+   font-size:5.3vh;
+   color:#000;
+   box-shadow: 5px 4px 3px #706d7d;
+ }
+ #menu-label{
+   background-image: url(image/menu.png);
+   z-index:2000;
+ }
+ #menu:checked ~ div.list{
+   transform:translateY(-140%);
+   transition-delay:0.2s;
+   transition-duration: 0.6s;
+   transition-timing-function: ease-in-out;
+ }
+ #menu:not(:checked) ~ div.list{
+   transform:translateY(0);
+   transition-delay:0.2s;
+   transition-duration:0.6s;
+   transition-timing-function: ease-in-out;
+ }
+ #menu{
+   display:none;
+ }
+ #menu:checked ~ div label img{
+   transform:rotate(180deg);
+   transition-delay:0.2s;
+   transition-timing-function: ease-in-out;
+   transition-duration:0.6s;
+ }
+ #menu:not(:checked) ~ div label img{
+   transform:rotate(-180deg);
+   transition-delay:0.2s;
+   transition-timing-function: ease-in-out;
+   transition-duration:0.6s;
+ }
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+.list .list-opacity{
+  background-color: aquamarine;
+  width:100%;
+  height:100px;
+  opacity:60%;
+}
+
+.links{
+  height:14vh;
+  width:100%;
+  line-height:14vh;
+  cursor:pointer;
+  border: 1.5px solid #272b96;
+  background-color: #3b3eff;
+  box-shadow: 5px 4px 3px #706d7d;
+}
+.links:hover{
+  background-color: #4044c7;
+  transform: scale(1.05);
+}
+.links:active{
+  background-color: #3337b0;
+  transform: scale(1.05);
+}
+#blanks{
+  width:100%;
+  height:30px;
+}
+#menu-toggle{
+ position:absolute;
+ top:100px;
+ background-color:#6668f2
+}
+#menu-toggle:hover{
+  background-color:#4448c4;
+  transform: scale(1.05);
+}
+#menu-toggle:active{
+  background-color:#3344b5;
+  transform: scale(1.05);
+}
+#menu-toggle2{
+ position:absolute;
+ top:100px;
+ background-color:#6668f2
+}
+#menu-toggle2:hover{
+  background-color:#4448c4;
+  transform: scale(1.05);
+}
+#menu-toggle2:active{
+  background-color:#3344b5;
+  transform: scale(1.05);
+}
+#open-list:checked ~ div.list #menu-toggle{
+  transform:translateY(14vh);
+  transition-duration: 0.4s;
+  transition-timing-function: ease-in-out;
+}
+#open-list:checked ~ div.list #menu-toggle2{
+  transform:translateY(28vh);
+  transition-duration: 0.4s;
+  transition-timing-function: ease-in-out;
+}
+#open-list:checked ~ div.list #second{
+  transform:translateY(28vh);
+  transition-duration: 0.4s;
+  transition-timing-function: ease-in-out;
+}
+#open-list:not(:checked) ~ div.list #menu-toggle{
+  transform:translateY(0);
+  transition-duration: 0.4s;
+  transition-timing-function: ease-in-out;
+}
+#open-list:not(:checked) ~ div.list #menu-toggle2{
+  transform:translateY(0);
+  transition-duration: 0.4s;
+  transition-timing-function: ease-in-out;
+}
+#open-list:not(:checked) ~ div.list #second{
+  transform:translateY(0);
+  transition-duration: 0.4s;
+  transition-timing-function: ease-in-out;
+}
+#open-list{
+  display:none;
+}
+.arrow {
+  border: solid black;
+  border-width: 0 0.55vh 0.55vh 0;
+  display: inline-block;
+  padding: 3px;
+}
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+#open-list:checked ~ .down{
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+}
+#open-list:not(:checked) ~ .down{
+  transform: rotate(-180deg);
+  -webkit-transform: rotate(-180deg);
+}
+#second{
+  height:14vh;
+  line-height:14vh;
+  transform:scale(1.00);
+  border-top:0.75px solid #272b96;
+  border-bottom:1.5px solid #272b96
+}
+#second:hover{
+  transform:scale(1.05);
+}
+#second:active{
+  transform:scale(1.05);
+}
+.footer{
+  background-color: #5f6370;
+  height:auto;
+  line-height:9vh;
+  position:absolute;
+  bottom:0;
+  width:99vw;
+  margin-bottom:0;
+  font-family: Consolas;
+  opacity: 90%;
+}
+th.bottom-th{
+  background-color: #5f6370;
+  border:none;
+  box-shadow:none;
+  font-size: 3.5vw;
+  font-weight:normal;
+  color:#fff;
+  text-decoration:underline;
+}
+th.bottom-th:hover{
+  cursor:default;
+}
+th.bottom-th a:link{
+  color:#fff;
+}
+th.bottom-th a:visited{
+  color:#a5d6fa;
+}
+.copyright{
+  font-size: 3vw;
+  font-weight:520;
+  text-decoration:none;
+  font-family: Consolas;
+  padding-left:2.5vw;
+  line-height: 5vh;
+  padding-bottom:8px;
+  animation-name:funny;
+  animation-duration:5s;
+  animation-iteration-count: infinite;
+}
+@keyframes funny{
+  0% {color:#fff;}
+  20% {color: #fcaba2;}
+  40% {color: #f8fca2;}
+  60% {color: #a2fce7;}
+  80% {color: #eca2fc;}
+  100% {color:#fff;}
+}
+table.fun{
+  text-align:center;
+  font-size: 3.5vw;
+  line-height:6.5vw;
+  margin-bottom: 7.5px;
+  text-decoration: underline;
+}
+td a{
+  color:#fff;
+}
+td a:hover{
+  cursor:pointer;
+  color:#fff;
+}
+</style>
+</head>
+<div>
+  <input onclick="javascript:uncheckListItems(this);" type="checkbox" id="menu" checked>
+  <script lang="javascript" type="text/javascript">
+      function uncheckListItems(obj){
+        if(obj.checked == true){
+          document.getElementById("open-list").checked = false;
+        }
+      }
+  </script>
+  <input type="checkbox" id="open-list">
+  <div class="list">
+    <div class="list-opacity"></div>
+    <a href="#"><label for="open-list" id="open-peni"><div class="links" style="border-bottom:0.75px solid #272b96;z-index:2;position:relative;box-shadow:none;">Fishing Family&trade;&nbsp;<i class="arrow down"></i></i></div></label></a>
+    <a href="http://music.fishing-family.tk/"><div class="links" id="menu-toggle">Music</div></a>
+    <a href="http://record.fishing-family.tk/"><div class="links" id="menu-toggle2">Records</div></a>
+    <a href="https://www.youtube.com/c/Craftguy/"><div id="second" class="links">Craftguy&trade; YouTube</div></a>
+ </div>
+  <body id="whole"><div class="dark">
+   <div class="container">
+    <div class="header">
+        <div><img src="image/craftguylogo.jpg" style="width:60px;display:inline-block;"></div>
+        <div class="header-words">Craftguy&trade;</div>
+    </div>
+    <div class="menu"><label for="menu" id="menu-label"><img src="image/menu.png" style="width:80px;margin-top:7px;"></label></div>
+    </div>
+    <table class="category">
+        <tr>
+            <th><label for="radio1" id="one">About</label></th>
+            <th><label for="radio2" id="two">Achievements</label></th>
+            <th><label for="radio3" id="three">Contact Me</label></th>
+        </tr>
+    </table>
+    <input type="radio" id="radio1" name="abc" checked>
+    <input type="radio" id="radio2" name="abc">
+    <input type="radio" id="radio3" name="abc">
+    <div id="b1">
+      <div class="headings">
+        Craftguy&trade; Brief History
+      </div>
+      <div class="contents">
+        Craftguy&trade; is a YouTube channel founded in 31st December, 2016. The first upload on Craftguy&trade; was the "How to Make a Very Easy Paper Finger Weapon" video, uploaded in 1st January, 2017. This video symbolizes the official debut of Craftguy&trade;.
+        <div>&nbsp;</div>
+        The first few videos uploaded in the Craftguy&trade; YouTube channel has no custom thumbnails until Craftguy realizes there wasn't any viewers for his videos. 
+        <div>&nbsp;</div>
+        The first popular video of Craftguy&trade; starts goes viral after Craftguy changed and optimized all his video thumbnails. The video was "How to Make an Easy Paper Bow and Arrow".
+        <div>&nbsp;</div>
+        Since then, Craftguy&trade; expanded its target audiences by increasing the video diversity, ranging from paper crafts to popsicle stick crafts.
+        <div>&nbsp;</div>
+        With more advanced technology and software, Craftguy&trade; improved his video quality significantly since 2021, as well as expanding his video coverage to China and European countries by setting up his Bilibili and YouTube English channel.
+        <div>&nbsp;</div>
+        Up till now, Craftguy has more than 100 public videos uploaded to YouTube and Bilibili, and having more than 1M views and 10M impressions in total for all of his videos.
+      </div>
+      <div class="headings" style="margin-top:45px;margin-bottom:15px;">
+        Craftguy&trade; Current Situation and Future Expectations
+      </div>
+      <div class="contents">
+        Craftguy&trade; is currently having a stable views and revenue from his videos.
+        <div>&nbsp;</div>
+        With AI technology becoming more mature and prevalent, Craftguy&trade; aims to further improve his video quality and post-production workflow by introducing more AI-powered softwares in the video processing work.
+        <div>&nbsp;</div>
+        With a simplified workflow and increased video production efficiency, Craftguy&trade; can certainly brings a better video experience to all audiences in the future.
+      </div>
+    </div>
+    <div id="b2">
+      <div class="headings">
+         Major Achievements:
+      </div>
+      <div class="contents">
+         -Reached 900k views(Chinese channel)<div></div>
+         -Most popular video reached 200k views(Chinese channel)<div></div>
+         -Reached 3k subscribers(Chinese channel)<div></div>
+         -Reached 150k views(English channel)<div></div>
+         -Reached 800 subscribers(English channel)<div></div>
+         -Reached 150k views(Bilibili channel)<div></div>
+         -Reached 600 subscribers(Bilibili channel)<div></div>
+         <div>&nbsp;</div>
+         <div style="font-weight:bold">
+          -Reached 1M views(total)<div></div>
+         -Reached 5k subscribers(total)<div></div>
+        </div>
+      </div>
+    </div>
+    <div id="b3">
+      <div class="headings">
+         Contact information:
+      </div>
+      <div class="contents">
+         Email: kwantszlong1555@gmail.com<div></div>
+         YouTube: Craftguy (Chinese Channel)<div></div>
+         YouTube: Craftguy (English Channel)<div></div>
+         Instagram: billiez15<div></div>
+         Bilibili: Craftguy
+         <div class="button"><span id="mail-link"><a class="email" href="mailto:kwantszlong1555@gmail.com">Email me</a></span></div>
+         <div id="blanks"></div>
+         <div class="button"><span id="yt-link"><a class="email2" href="https://www.youtube.com/c/Craftguy?sub_confirmation=1/">Subscribe Craftguy to Support Me!</a></span></div>
+      </div>
+    </div>
+    <div class="footer">
+      <table class="bottom-table">
+        <tr>
+          <a class="bottom-stuff"><th class="bottom-th"><a href="https://www.youtube.com/c/Craftguy/">Chinese Channel</a></th></a>
+          <a class="bottom-stuff"><th class="bottom-th"><a href="https://www.youtube.com/c/Craftguy2/">English Channel</a></th></a>
+          <a class="bottom-stuff"><th class="bottom-th"><a href="https://space.bilibili.com/1507548366?spm_id_from=333.1007.0.0/">Bilibili Channel</a></th></a>
+        </tr>
+      </table>
+      <table class="fun">
+        <tr>
+          <td><a href="#">Privacy</a></td>
+          <td><a href="#">Cookie Preferences</a></td>
+        </tr>
+      </table>
+      <div class="copyright">
+        Copyright &copy Craftguy&trade; 2022. All rights reserved.
+      </div>
+    </div>
+    <script>$('#radio1').prop('checked',true);
+    </script></div>
+</body></div>
+</html>
