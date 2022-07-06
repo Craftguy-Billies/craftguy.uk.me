@@ -24,6 +24,25 @@
         overflow-x:hidden;
         margin:0px;
     }
+    ::-webkit-scrollbar{
+      width:2.3vw;
+    }
+    ::-webkit-scrollbar-thumb{
+      background: #f6f78f;
+      border-radius:6px;
+      border: 1.1px solid #151e73;
+    }
+    ::-webkit-scrollbar-thumb:hover{
+      background: #d7d968;
+    }
+    ::-webkit-scrollbar-thumb:active{
+      background: #bdbf4b;
+    }
+    ::-webkit-scrollbar-track{
+      background: #a8e8ff;
+      outline: 1.3px solid #000;
+      box-shadow:inset 2px 2px 3px rgba(120, 130, 137, 0.29);
+    }
     .header{
         display:flex;
         background-color:#fff;
@@ -62,6 +81,9 @@
  table.limiter{
   height: fit-content;
  }
+ #radio11:checked ~ table tr th{
+  border:1.5px solid #fff;
+}
  th {
     color: #000;
     background-color:bisque;
@@ -101,7 +123,7 @@
     display:none;
  }
  #b1 {
-    width:95%;   
+    width:94%;   
     background-color: #69fcff;
     margin-top:10px;
     border: 1.5px double #000;
@@ -112,12 +134,12 @@
     display:none;
     border-radius:7px;
     padding-bottom:4vh;
-    padding-left:3vh;
+    padding-left:2vh;
     padding-right:2.5vw;
  }
  #b2 {
-    padding-left:3vh;
-    width:95%;
+    padding-left:2vh;
+    width:94%;
     background-color: #ffff94;
     margin-top:10px;
     border: 1.5px double #000;
@@ -131,8 +153,8 @@
     padding-right:2.5vw;
  }
  #b3 {
-    padding-left:3vh;
-    width:95%;
+    padding-left:2vh;
+    width:94%;
     background-color: #fca7af;
     margin-top:10px;
     border: 1.5px double #000;
@@ -546,7 +568,7 @@ td a:hover{
 .cookieconsent{
   position:fixed;
   width:98vw;
-  height:35vh;
+  height:auto;
   background-color: #5669c4;
   bottom:0;
   border:1.4px solid #000;
@@ -555,7 +577,7 @@ td a:hover{
   padding-top:1.5vh;
   padding-left:1.5vw;
   color:#fff;
-  font-size: 18px;
+  font-size: 20px;
   box-shadow: 0 -1.5px 2px #9699a8;
 }
 label#outer{
@@ -566,6 +588,7 @@ div#accept{
   width:150px;
   height:40px;
   margin-top: 20px;
+  margin-bottom:14px;
   line-height:40px;
   background-color: #f0f285;
   text-align:center;
@@ -606,6 +629,48 @@ a.rjj:visited{
 #byebye{
   display:none;
 }
+.darkmode{
+  font-size: 25px;
+  color: #fff;
+  background-color: #000;
+  border:1.5px solid #fff;
+  font-family: Consolas;
+  text-align:center;
+  line-height:40px;
+  width:260px;
+  margin-top:15px;
+  margin-bottom:10px;
+  border-radius:7px;
+  box-shadow: 1px 5px 3px #43434a;
+}
+.darkmode:hover{
+  cursor:pointer;
+}
+.darkmode:active{
+  transform:translateY(4px);
+  box-shadow: 1px 1px 3px #43434a;
+}
+.darkmodes{
+  background-color:#000;
+}
+#radio10:checked ~ #b1{
+  border: 1.5px solid #fff;
+}
+#radio10:checked ~ #b2{
+  border: 1.5px solid #fff;
+}
+#radio10:checked ~ #b3{
+  border: 1.5px solid #fff;
+}
+button.darkmode label#red{
+  display:inline-block;
+}
+#radio10{
+  display:none;
+}
+#radio11{
+  display:none;
+}
 </style>
 </head>
 <div>
@@ -634,14 +699,16 @@ a.rjj:visited{
     <div class="menu"><label for="menu" id="menu-label"><img src="image/menu.png" style="width:80px;margin-top:7px;"></label></div>
     </div>
     <div class="limiter">
+    <input type="checkbox" id="radio11" aria-labelledby="red">
     <table class="category">
         <tr>
-            <th><label for="radio1" id="one">About</label></th>
-            <th><label for="radio2" id="two">Achievements</label></th>
-            <th><label for="radio3" id="three">Contact Me</label></th>
+            <th class="j" id="lol"><label for="radio1" id="one">About</label></th>
+            <th class="j" id="lal"><label for="radio2" id="two">Achievements</label></th>
+            <th class="j" id="lel"><label for="radio3" id="three">Contact Me</label></th>
         </tr>
     </table>
     </div>
+    <input type="checkbox" id="radio10" aria-labelledby="red">
     <input type="radio" id="radio1" name="abc" checked>
     <input type="radio" id="radio2" name="abc">
     <input type="radio" id="radio3" name="abc">
@@ -729,6 +796,15 @@ a.rjj:visited{
          <div class="button"><span id="yt-link"><a class="email2" href="https://www.youtube.com/c/Craftguy?sub_confirmation=1/">Subscribe Craftguy to Support Me!</a></span></div>
       </div>
     </div>
+    <button class="darkmode" onclick="toggle(this)" id="her"><label id="red" for="radio10">Dark Mode</label></button>
+    <script lang="javascript" type="text/javascript">
+      function toggle(e){
+        let txt = e.innerText;
+        e.innerText = txt == 'Dark Mode' ? 'Disable Dark Mode' : 'Dark Mode';
+        var element = document.body;
+        element.classList.toggle("darkmodes");
+      }
+    </script>
     <div class="footer">
       <table class="bottom-table">
         <tr>
